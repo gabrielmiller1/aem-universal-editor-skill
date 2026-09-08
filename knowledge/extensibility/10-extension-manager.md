@@ -1,5 +1,9 @@
 # Extension Manager
 
+Status: **VOLATILE**
+Last verified: 2026-09-08
+Official source: https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/configuring-and-extending/extension-manager
+
 In AEM as a Cloud Service, Extension Manager is used to manage UI extensions.
 
 Current documented capabilities include:

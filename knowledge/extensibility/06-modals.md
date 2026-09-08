@@ -1,5 +1,9 @@
 # Modal dialogs
 
+Status: **VOLATILE**
+Last verified: 2026-09-08
+Official source: https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/modal/
+
 Universal Editor exposes a modal host API for extension UI.
 
 Current documentation describes:
@@ -9,6 +13,8 @@ Current documentation describes:
 - loading state
 - closing the modal
 - updating modal properties
+
+`host.modal.showUrl(request)` returns a modal instance and requires a same-origin `url` and a `title`. `host.modal.close()` closes only the caller’s modal. A modal route uses `host.modal.set(request)` to update its own modal. Use `loading: true` while an attached modal fetches required data, then clear it with `modal.set({ loading: false })`; never disable dismissal without providing an accessible close control.
 
 Use a modal when a workflow needs more space than a field renderer or properties rail.
 

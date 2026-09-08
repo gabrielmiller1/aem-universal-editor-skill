@@ -1,5 +1,11 @@
 # Universal Editor Rich Text
 
+Status: **SUPPORTED** for filter-based configuration; **VOLATILE** for newly introduced hooks
+Last verified: 2026-09-08
+Official sources:
+- https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/configure-rte
+- https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/universal-editor/current
+
 Universal Editor supports rich text authoring in-place and in the properties panel.
 
 Treat RTE capability as a contract among:
@@ -18,4 +24,4 @@ Treat RTE capability as a contract among:
 
 ## 2026 freshness note
 
-As of the September 2026 Universal Editor release notes, `beforeSave` and `beforeLoad` RTE extensions are supported. The agent must verify the current API documentation before implementing these hooks.
+The September 3, 2026 release notes announce `beforeSave` and `beforeLoad` RTE extensions. The public RTE configuration reference inspected on 2026-09-08 does not document hook names, registration, signatures, ordering, error behavior, or support status. Treat them as **UNDOCUMENTED**, not production-ready. Do not generate an implementation until a current public developer/API reference defines that contract.

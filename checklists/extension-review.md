@@ -3,11 +3,13 @@
 - [ ] Requirement correctly classified as UI extension
 - [ ] Current extension point verified
 - [ ] Current UIX method signatures verified
+- [ ] API status recorded: SUPPORTED, VOLATILE, PREVIEW, UNDOCUMENTED, or DEPRECATED
 - [ ] Stable vendor-prefixed IDs used
 - [ ] `register()` lifecycle robust
 - [ ] `attach()` errors handled
 - [ ] Extension route URLs correct
 - [ ] Same-origin modal/renderer requirements respected
+- [ ] Rail uses documented `rightPanel.addRails()`; no API was inferred from a generic sample
 - [ ] Loading state implemented
 - [ ] Empty state implemented
 - [ ] Error state implemented
@@ -16,8 +18,10 @@
 - [ ] No client-side secrets
 - [ ] Protected calls use approved backend boundary
 - [ ] Runtime Action input validated
+- [ ] Runtime Action authentication/authorization, CORS, input limits, upstream timeouts, and safe errors reviewed
 - [ ] External requests time out safely
 - [ ] React Spectrum used where appropriate
 - [ ] Extension Manager configuration documented
 - [ ] Preview/testing process documented
 - [ ] Rollback/disable path documented
+- [ ] No contextual-menu or RTE hook implementation relies on release notes alone

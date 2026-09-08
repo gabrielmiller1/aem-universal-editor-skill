@@ -1,5 +1,7 @@
 # Source and freshness policy
 
+Last verified: 2026-09-08
+
 Universal Editor changes frequently. This knowledge base is a reasoning scaffold, not a replacement for current Adobe documentation.
 
 ## Official sources to verify
@@ -46,3 +48,11 @@ Prefer:
 5. Community articles for additional practice context only
 
 Do not let a community article override current official API documentation.
+
+## Status vocabulary
+
+- **SUPPORTED** — currently documented public API suitable for normal production use.
+- **VOLATILE** — currently documented, but re-check before implementation because Universal Editor/UIX evolves quickly.
+- **PREVIEW** — explicitly preview, experimental, or pre-release; do not treat as production-ready without approval.
+- **UNDOCUMENTED** — observed in a release note, example, or product UI without a current public developer contract; do not invent code for it.
+- **DEPRECATED** — obsolete; do not introduce it in new work.

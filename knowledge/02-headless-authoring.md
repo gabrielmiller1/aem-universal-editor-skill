@@ -1,5 +1,9 @@
 # Headless authoring with Universal Editor
 
+Status: **SUPPORTED**
+Last verified: 2026-09-08
+Official source: https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview
+
 ## Core principle
 
 The application remains responsible for rendering the experience. Universal Editor augments that rendered experience with authoring semantics.
@@ -26,3 +30,17 @@ The agent should always identify:
 ## Design rule
 
 The extension should never become the source of truth for content. It is an authoring client. Persist durable content in the intended AEM/content backend.
+
+## Boundary map
+
+```text
+Content Fragment Model -> schema and durable validation
+Content Fragment        -> authored content instance
+GraphQL/persisted query -> delivery contract and cache behavior
+Headless application    -> rendering and data fetching
+data-aue-*              -> rendered DOM-to-resource mapping
+UE model/filter         -> properties-panel and insertion constraints
+UI extension            -> optional editor workflow; not content ownership
+```
+
+Do not make a delivery query, a Content Fragment Model, and a Universal Editor model share an identifier or structure merely for convenience. They have separate responsibilities and can evolve independently through an explicit mapping.

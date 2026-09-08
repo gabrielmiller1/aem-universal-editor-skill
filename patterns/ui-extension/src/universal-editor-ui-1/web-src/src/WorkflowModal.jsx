@@ -18,7 +18,10 @@ export default function WorkflowModal() {
 
   useEffect(() => {
     attach({ id: extensionId })
-      .then(setConnection)
+      .then(async (nextConnection) => {
+        setConnection(nextConnection);
+        await nextConnection.host.modal.set({ loading: false });
+      })
       .catch((error) => {
         console.error("Unable to attach modal", error);
         setMessage("Unable to connect to Universal Editor.");
@@ -39,7 +42,6 @@ export default function WorkflowModal() {
       await connection.host.editorActions.refreshPage();
       setMessage("Operation completed.");
     } catch (error) {
-      console.error("Workflow failed", error);
       setMessage("Operation failed.");
     } finally {
       setWorking(false);
@@ -47,9 +49,7 @@ export default function WorkflowModal() {
   };
 
   const close = async () => {
-    if (connection) {
-      await connection.host.modal.close();
-    }
+    if (connection) await connection.host.modal.close();
   };
 
   return (

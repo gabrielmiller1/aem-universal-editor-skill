@@ -1,5 +1,9 @@
 # Custom data types / field renderers
 
+Status: **VOLATILE**
+Last verified: 2026-09-08
+Official source: https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/custom-data-types/
+
 Universal Editor UI Extensibility supports custom field rendering in the properties rail.
 
 A custom renderer can:
@@ -11,19 +15,19 @@ A custom renderer can:
 - write values through the host field API
 - adjust iframe height
 
-Current registration is exposed through the `canvas` namespace and a renderer definition containing a data type and a same-origin extension route URL.
+Registration uses `canvas.getRenderers()` and a renderer `{ dataType, url, icon? }`. `dataType` is the model field’s `component` value, not `valueType`; `url` must be same-origin with the declaring extension. Prefer a vendor-specific custom component (for example `com.example.product-reference`) rather than silently overriding a built-in renderer.
 
 ## Field API
 
-Current documentation includes field operations conceptually equivalent to:
-- get model
-- get value
-- get error
-- get validation state
-- write/change value
-- set renderer height
+Current documentation names these field operations:
+- `getModel()`
+- `getValue()`
+- `getError()`
+- `getValidationState()`
+- `onChange(value)`
+- `setHeight(height)`
 
-Verify exact method names/signatures before production coding.
+The current public page describes semantics but not complete TypeScript signatures or lifecycle guarantees. Verify the installed SDK/current page before production coding; normalize values before `onChange`, respect `model.readOnly`, and call `setHeight` only with a measured, bounded UI height.
 
 ## Best use cases
 

@@ -4,17 +4,23 @@
 - [ ] Persistence target identified
 - [ ] Delivery query/API identified
 - [ ] `data-aue-resource` correct
+- [ ] Resource inheritance is intentional; resource points at the persistence target
 - [ ] `data-aue-prop` correct
 - [ ] `data-aue-type` supported/correct
 - [ ] `data-aue-filter` correct if present
 - [ ] `data-aue-label` useful
 - [ ] `data-aue-model` intentional if present
+- [ ] Instrumentation model override is not accidentally masking component-definition `model`
 - [ ] No obsolete `data-aue-behavior`
 - [ ] Component model exists
 - [ ] Component definition/model relationship correct
+- [ ] Component is nested under its definition group and its IDs are unique
+- [ ] Field names, defaults, value types, conditions, multifields, and validation match the persistence contract
+- [ ] Multifields do not nest containers
 - [ ] Filters constrain valid authoring
 - [ ] RTE features compatible with backend
 - [ ] Authoring works
 - [ ] Non-editor rendering works
 - [ ] Localization behavior verified
 - [ ] Backend validation verified
+- [ ] Content Fragment Model, delivery contract, and UE model are treated as separate contracts

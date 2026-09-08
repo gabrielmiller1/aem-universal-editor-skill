@@ -1,5 +1,9 @@
 # Header menu extension
 
+Status: **VOLATILE**
+Last verified: 2026-09-08
+Official source: https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/header-menu/
+
 The Universal Editor currently supports extension-provided header menu buttons.
 
 A header action is appropriate for:
@@ -26,7 +30,7 @@ headerMenu: {
 }
 ```
 
-Buttons can support sub-items according to current UIX documentation.
+Buttons can support sub-items according to current UIX documentation. The documented button contract uses a globally unique `id`, `label`, optional Spectrum workflow `icon`, optional `variant`, and `onClick`; submenu item IDs need only be unique within their submenu. Treat icon availability and callback details as version-sensitive.
 
 ## Design guidance
 

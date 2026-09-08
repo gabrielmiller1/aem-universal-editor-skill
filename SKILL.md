@@ -158,6 +158,7 @@ Never put credentials or privileged secrets in browser extension code.
 - Do not invent UIX namespaces or host methods.
 - Do not assume a release-note feature means a stable public API exists.
 - If an extension point exists in release notes but its current developer API is unclear, stop implementation at a documented boundary and explain what must be verified.
+- Classify every significant API claim as **SUPPORTED**, **VOLATILE**, **PREVIEW**, **UNDOCUMENTED**, or **DEPRECATED**. A release note alone never upgrades an API to SUPPORTED.
 
 ## Advanced UI extensibility rules
 
@@ -165,7 +166,7 @@ Universal Editor UI extensions use the Universal Editor UI extension point and t
 
 Known core concepts to verify before implementation:
 - App Builder extension declaration
-- `universal-editor/ui/1`
+- `universal-editor/ui/1` (currently documented, but verify for each production implementation)
 - `@adobe/uix-guest`
 - `register(...)`
 - `attach(...)`

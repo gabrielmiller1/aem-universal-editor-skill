@@ -1,6 +1,12 @@
 # Contextual menu extensibility
 
-Universal Editor release notes added a contextual-menu extension point in the March 26, 2026 release.
+Status: **UNDOCUMENTED**
+Last verified: 2026-09-08
+Official sources:
+- https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/
+- https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/universal-editor/current
+
+Release notes or product announcements may mention contextual-menu capability. The current public Universal Editor UIX API inspected for this audit does not publish a contextual-menu namespace, method, payload, or lifecycle contract.
 
 Important: release-note presence is not sufficient to invent a public API.
 

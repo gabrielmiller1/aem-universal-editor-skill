@@ -1,5 +1,9 @@
 # Universal Editor UI Extensibility architecture
 
+Status: **VOLATILE**
+Last verified: 2026-09-08
+Official source: https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/commons/
+
 Universal Editor UI extensions are App Builder applications.
 
 The core public extension point currently documented for Universal Editor UI extensibility is:

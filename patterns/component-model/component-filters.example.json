@@ -1,0 +1,17 @@
+[
+  {
+    "id": "commerce-components",
+    "components": ["product-hero"]
+  },
+  {
+    "id": "product-richtext",
+    "components": ["richtext"],
+    "rte": {
+      "toolbar": {
+        "format": ["bold", "italic"],
+        "insert": ["link", "unlink"],
+        "sections": ["format", "insert"]
+      }
+    }
+  }
+]

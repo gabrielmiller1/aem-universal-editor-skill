@@ -1,27 +1,21 @@
-# AEM Universal Editor Skill
+# AEM Universal Editor Engineering Skill
 
-A shared engineering skill for AI coding agents working with **Adobe Experience Manager as a Cloud Service (AEMaaCS)**, **Universal Editor**, and **headless applications**.
-
-Designed to be used with **Claude Code** and **OpenAI Codex** from the same knowledge base.
+One shared engineering skill for Claude Code and OpenAI Codex developing production AEM as a Cloud Service Universal Editor solutions.
 
 ## What it covers
 
-The skill provides specialized guidance and implementation patterns for:
+It covers:
 
 - AEM as a Cloud Service
 - Universal Editor
-- Headless applications
-- Content Fragments
-- GraphQL and persisted queries
+- Headless applications, Content Fragments, GraphQL, and persisted queries
 - Universal Editor instrumentation (`data-aue-*`)
 - Component definitions, models and filters
 - Rich Text Editor configuration
 - Universal Editor UI Extensibility
 - Adobe App Builder
 - `@adobe/uix-guest`
-- Header actions
-- Properties rail extensions
-- Custom field renderers
+- Header menus, Properties Rail extensions, custom field/data-type renderers, and modals
 - Modals and advanced authoring workflows
 - Editor state and actions
 - Adobe I/O Runtime integrations
@@ -30,27 +24,20 @@ The skill provides specialized guidance and implementation patterns for:
 
 The goal is not only to help with basic Universal Editor configuration, but also with **advanced development of the Universal Editor authoring experience itself**.
 
-## Repository structure
+## Use it
 
 ```text
 .
-├── SKILL.md               # Main engineering instructions
-├── AGENTS.md              # Codex entry point
-├── CLAUDE.md              # Claude Code entry point
+├── SKILL.md               # Source of truth
+├── AGENTS.md / CLAUDE.md  # Thin agent adapters
 │
 ├── knowledge/             # Universal Editor engineering knowledge
 ├── patterns/              # Reusable implementation patterns
-├── examples/              # Advanced architecture examples
+├── examples/              # Small advanced architecture patterns
 ├── checklists/            # Review and production checklists
 ├── prompts/               # Ready-to-use agent prompts
 └── scripts/               # Validation and inspection utilities
 ```
-
-`SKILL.md` is the source of truth.
-
-`AGENTS.md` and `CLAUDE.md` are intentionally small adapters so both coding agents use the same engineering knowledge.
-
-## Using it
 
 Clone the repository somewhere accessible from your development workspace:
 
@@ -66,9 +53,9 @@ workspace/
 └── my-aem-project/
 ```
 
-### Claude Code
+Tell either agent to read its adapter and `SKILL.md`, inspect the target project, classify the change using the six-level decision model, verify volatile Adobe APIs, implement the smallest correct solution, and run the relevant checklists and scripts.
 
-Tell Claude Code to use the skill when working on Universal Editor tasks:
+For Claude Code:
 
 ```text
 Read ../aem-universal-editor-skill/CLAUDE.md and
@@ -78,8 +65,6 @@ Use that skill for this task.
 
 Review the Universal Editor implementation in this project.
 ```
-
-### Codex
 
 For Codex:
 
@@ -92,9 +77,13 @@ Use that skill for this task.
 Review the Universal Editor implementation in this project.
 ```
 
-You can also copy or reference the appropriate adapter from your project if you want the skill to be discovered automatically.
+## Freshness and contribution
 
-## Example: advanced Universal Editor development
+Adobe documentation is authoritative. Local guidance labels significant claims as **SUPPORTED**, **VOLATILE**, **PREVIEW**, **UNDOCUMENTED**, or **DEPRECATED**; volatile API work must be re-checked against current first-party Adobe documentation. See `knowledge/00-source-policy.md`.
+
+Keep contributions distilled and practical: correct an existing pattern before adding one, include an official source link and actual verification date, avoid credentials and generated files, and run the relevant scripts/checklists.
+
+## Prompt example
 
 ```text
 Use the AEM Universal Editor skill.
@@ -116,69 +105,3 @@ Adobe I/O Runtime Action.
 
 Do not expose secrets in browser code.
 ```
-
-## Example: extending the Universal Editor UI
-
-```text
-Use the AEM Universal Editor skill.
-
-Create a Content Advisor panel in the Universal Editor properties rail.
-
-The panel should:
-
-- inspect the current editor state
-- understand the currently selected content
-- call a protected backend
-- display validation and content suggestions
-- allow selecting affected editables
-- launch remediation workflows
-- refresh the editor when necessary
-
-Verify the current Universal Editor UI Extensibility APIs before coding.
-```
-
-## Example: project review
-
-Ready-to-use prompts are available under `prompts/`.
-
-For example:
-
-```text
-Read the AEM Universal Editor skill and follow
-prompts/review-project.md.
-
-Review this project.
-```
-
-The review covers instrumentation, Content Fragments, GraphQL, component models, filters, UI extensions, App Builder integrations, security and production readiness.
-
-## Keeping the skill current
-
-Universal Editor evolves quickly.
-
-For volatile APIs such as:
-
-- extension points
-- `@adobe/uix-guest`
-- editor actions
-- custom field APIs
-- RTE extensions
-- App Builder integration
-- Extension Manager
-
-the skill instructs coding agents to **verify the current Adobe documentation before generating production code**.
-
-The local knowledge base should guide reasoning and architecture, not replace current Adobe documentation.
-
-## Contributing
-
-Improvements, fixes and new Universal Editor patterns are welcome.
-
-When adding examples:
-
-- keep them generic
-- do not include customer-specific code or credentials
-- prefer supported Adobe APIs
-- document assumptions
-- avoid undocumented Universal Editor APIs
-- update the relevant checklist or knowledge file when appropriate

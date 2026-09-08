@@ -4,7 +4,8 @@ import {
   defaultTheme,
   TextField,
   ProgressCircle,
-  View
+  View,
+  Text
 } from "@adobe/react-spectrum";
 import { attach } from "@adobe/uix-guest";
 import { extensionId } from "./Constants";
@@ -21,6 +22,8 @@ export default function CustomFieldRenderer() {
   const [model, setModel] = useState(null);
   const [value, setValue] = useState("");
   const [error, setError] = useState(null);
+  const [validationState, setValidationState] = useState(null);
+  const [loadError, setLoadError] = useState(null);
 
   useEffect(() => {
     let active = true;
@@ -28,10 +31,11 @@ export default function CustomFieldRenderer() {
     (async () => {
       try {
         const conn = await attach({ id: extensionId });
-        const [fieldModel, fieldValue, fieldError] = await Promise.all([
+        const [fieldModel, fieldValue, fieldError, nextValidationState] = await Promise.all([
           conn.host.field.getModel(),
           conn.host.field.getValue(),
           conn.host.field.getError(),
+          conn.host.field.getValidationState(),
         ]);
 
         if (!active) return;
@@ -40,8 +44,10 @@ export default function CustomFieldRenderer() {
         setModel(fieldModel);
         setValue(fieldValue ?? "");
         setError(fieldError ?? null);
+        setValidationState(nextValidationState ?? null);
+        await conn.host.field.setHeight(160);
       } catch (e) {
-        console.error("Failed to initialize field renderer", e);
+        if (active) setLoadError("Unable to load this field.");
       }
     })();
 
@@ -51,13 +57,26 @@ export default function CustomFieldRenderer() {
   }, []);
 
   const onChange = async (nextValue) => {
-    setValue(nextValue);
+    const normalizedValue = nextValue.trim();
+    setValue(normalizedValue);
 
-    if (!connection) return;
+    if (!connection || model?.readOnly) return;
 
-    // Verify current field API semantics/signature before production use.
-    await connection.host.field.onChange(nextValue);
+    try {
+      await connection.host.field.onChange(normalizedValue);
+      setError(null);
+    } catch {
+      setError("Unable to save the selected value.");
+    }
   };
+
+  if (loadError) {
+    return (
+      <Provider theme={defaultTheme}>
+        <View padding="size-100"><Text>{loadError}</Text></View>
+      </Provider>
+    );
+  }
 
   if (!model) {
     return (
@@ -77,7 +96,7 @@ export default function CustomFieldRenderer() {
           value={String(value)}
           isRequired={Boolean(model.required)}
           isReadOnly={Boolean(model.readOnly)}
-          validationState={error ? "invalid" : undefined}
+          validationState={error ? "invalid" : validationState || undefined}
           errorMessage={error || undefined}
           onChange={onChange}
           width="100%"

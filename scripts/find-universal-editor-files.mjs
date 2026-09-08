@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const root = process.argv[2] || ".";
+const root = path.resolve(process.argv[2] || ".");
 const interesting = [
   "component-definition.json",
   "component-models.json",
@@ -13,9 +13,22 @@ const interesting = [
   "CLAUDE.md",
 ];
 
+const ignoredDirectories = new Set([
+  ".git", ".next", "build", "coverage", "dist", "node_modules", "target",
+]);
+
 function walk(dir) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (["node_modules", ".git", "dist", "build", "target"].includes(entry.name)) continue;
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch (error) {
+    console.error(`Unable to read ${dir}: ${error.message}`);
+    process.exitCode = 1;
+    return;
+  }
+
+  for (const entry of entries) {
+    if (ignoredDirectories.has(entry.name) || entry.isSymbolicLink()) continue;
 
     const full = path.join(dir, entry.name);
 
@@ -25,6 +38,11 @@ function walk(dir) {
       console.log(full);
     }
   }
+}
+
+if (!fs.statSync(root).isDirectory()) {
+  console.error(`Not a directory: ${root}`);
+  process.exit(2);
 }
 
 walk(root);

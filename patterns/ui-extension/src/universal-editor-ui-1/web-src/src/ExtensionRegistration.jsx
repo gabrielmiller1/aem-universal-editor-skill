@@ -4,12 +4,8 @@ import { Text } from "@adobe/react-spectrum";
 import { extensionId } from "./Constants";
 
 /**
- * Demonstrates currently documented Universal Editor UIX concepts.
- *
- * Before production use:
- * - verify the current Adobe Developer API documentation;
- * - validate icon names;
- * - validate exact rightPanel method naming in the installed SDK/docs.
+ * Documented UIX pattern as of 2026-09-08. Re-check the current Adobe UIX
+ * reference and Extension Manager setup before deploying.
  */
 export default function ExtensionRegistration() {
   const [status, setStatus] = useState("Registering");
@@ -19,7 +15,7 @@ export default function ExtensionRegistration() {
 
     async function init() {
       try {
-        await register({
+        const connection = await register({
           id: extensionId,
           methods: {
             headerMenu: {
@@ -29,32 +25,38 @@ export default function ExtensionRegistration() {
                     id: "com.example.aem-universal-editor-toolkit.inspect",
                     label: "Inspect authoring",
                     icon: "Info",
-                    onClick: () => {
-                      // Keep callbacks small.
-                      // In a real extension, open a documented modal route
-                      // or invoke a dedicated workflow service.
-                      console.info("Inspect authoring action invoked");
+                    onClick: async () => {
+                      await connection.host.modal.showUrl({
+                        title: "Authoring workflow",
+                        url: "/#/modal",
+                        width: "900px",
+                        loading: true,
+                      });
                     },
                   },
                 ];
               },
             },
 
-            /*
-             * Properties-rail extension APIs evolve.
-             * Verify current docs before enabling this block.
-             *
-             * rightPanel: {
-             *   addRails() {
-             *     return [{
-             *       id: "com.example.aem-universal-editor-toolkit.diagnostics",
-             *       header: "Diagnostics",
-             *       url: "/#/rail/diagnostics",
-             *       icon: "Info"
-             *     }];
-             *   }
-             * }
-             */
+            rightPanel: {
+              addRails() {
+                return [{
+                  id: "com.example.aem-universal-editor-toolkit.diagnostics",
+                  header: "Authoring diagnostics",
+                  url: "/#/rail/diagnostics",
+                  icon: "Info",
+                }];
+              },
+            },
+            canvas: {
+              getRenderers() {
+                return [{
+                  dataType: "com.example.product-reference",
+                  url: "/#/renderer/product-reference",
+                  icon: "Search",
+                }];
+              },
+            },
           },
         });
 

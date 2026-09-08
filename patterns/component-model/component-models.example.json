@@ -6,12 +6,14 @@
         "component": "text",
         "name": "title",
         "label": "Title",
+        "valueType": "string",
         "required": true
       },
       {
         "component": "textarea",
         "name": "description",
-        "label": "Description"
+        "label": "Description",
+        "valueType": "string"
       },
       {
         "component": "select",
