@@ -1,3 +1,8 @@
+---
+name: aem-universal-editor
+description: Develop and review AEM as a Cloud Service Universal Editor and headless AEM solutions, including Content Fragments, GraphQL, data-aue instrumentation, component models/definitions/filters, UI Extensibility, App Builder, UIX field renderers, properties rails, modals, Runtime Actions, and advanced authoring workflows.
+---
+
 # AEM Universal Editor Engineering Skill
 
 ## Mission

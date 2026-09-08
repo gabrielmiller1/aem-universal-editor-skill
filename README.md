@@ -53,6 +53,30 @@ workspace/
 └── my-aem-project/
 ```
 
+## Skill discovery
+
+`SKILL.md` begins with shared Agent Skills YAML frontmatter. `name` and `description` let Claude Code and Codex index the skill and select it when a task matches. The repository keeps one canonical `SKILL.md`; its `.claude/skills/aem-universal-editor` and `.agents/skills/aem-universal-editor` entries are symlinks to this repository root for project discovery.
+
+### Claude Code
+
+Claude Code discovers personal skills at `~/.claude/skills/<skill-name>/SKILL.md` and project skills at `.claude/skills/<skill-name>/SKILL.md`. It supports symlinked skill folders. To install this clone globally:
+
+```bash
+ln -s /absolute/path/to/aem-universal-editor-skill \
+  ~/.claude/skills/aem-universal-editor
+```
+
+### OpenAI Codex
+
+Codex discovers user skills at `~/.agents/skills/<skill-name>/SKILL.md` and repository skills at `.agents/skills/<skill-name>/SKILL.md`. It supports symlinked skill folders. To install this clone globally:
+
+```bash
+ln -s /absolute/path/to/aem-universal-editor-skill \
+  ~/.agents/skills/aem-universal-editor
+```
+
+Create the parent directory first if it does not exist. Restart the agent if a newly added skill does not appear. See the [Claude Code skills documentation](https://code.claude.com/docs/en/skills) and [OpenAI Codex skills documentation](https://developers.openai.com/codex/skills).
+
 Tell either agent to read its adapter and `SKILL.md`, inspect the target project, classify the change using the six-level decision model, verify volatile Adobe APIs, implement the smallest correct solution, and run the relevant checklists and scripts.
 
 For Claude Code:
