@@ -1,0 +1,252 @@
+[
+  {
+    "path": "AGENTS.md",
+    "sha256": "38085a96d3531fbd4351426581ea0a59a2e8512b3ae2003b772df3aaf95a4e24",
+    "bytes": 595
+  },
+  {
+    "path": "CLAUDE.md",
+    "sha256": "4f9b0733651ed354ece7a9b28049ead3fe68349096bbcb4274ed10742f52c8f6",
+    "bytes": 596
+  },
+  {
+    "path": "README.md",
+    "sha256": "a87bdeee7fe78c313aad4486dbbb5b3e40abfa9a7d2839e739a43afbc56c2a13",
+    "bytes": 2433
+  },
+  {
+    "path": "SKILL.md",
+    "sha256": "6d953dd23870dd667c74e6d929a9b10803b296e2425acf442cec5784dc618070",
+    "bytes": 7039
+  },
+  {
+    "path": "VERSION",
+    "sha256": "93ceb83f8e670025949a5102ad37780c25b117cf5cf63c326ecab86fd5ff124a",
+    "bytes": 16
+  },
+  {
+    "path": "checklists/component-review.md",
+    "sha256": "3214b8a5bc38406ef328d5c9f74a76db9a7f9392ff09a8a2fcfba75801d93d90",
+    "bytes": 704
+  },
+  {
+    "path": "checklists/extension-review.md",
+    "sha256": "dd0ceb4c0c2cdae751995ed61289871152b92b72ecb6784851755b55ad1780c6",
+    "bytes": 868
+  },
+  {
+    "path": "checklists/production-readiness.md",
+    "sha256": "1bfafa42d659fba60ebe0aa5b3c5002dd5d3ac4e0892e64401d8af2e7f3c2d75",
+    "bytes": 691
+  },
+  {
+    "path": "examples/advanced-ai-authoring/README.md",
+    "sha256": "c31036e10960d7db938708d0be991a6fe376a39cbab79d5f7d563b1c709dcaa1",
+    "bytes": 891
+  },
+  {
+    "path": "examples/advanced-content-advisor/README.md",
+    "sha256": "e06161702c4fa1ec08a27440982075fb24553e9e1f89453c070f855d62c0ed7d",
+    "bytes": 680
+  },
+  {
+    "path": "examples/advanced-product-picker/README.md",
+    "sha256": "094311a67ace73ea4c6fbba53af158adf30ef9f43e307ddf839b523ae8f2797d",
+    "bytes": 946
+  },
+  {
+    "path": "knowledge/00-source-policy.md",
+    "sha256": "53dc79a3c4045dd5af6f522ae1d46998fec3a14f317488750d0e01ad8569591a",
+    "bytes": 1596
+  },
+  {
+    "path": "knowledge/01-architecture.md",
+    "sha256": "c12fe0f4474c134b35c09a238a7e42b7b863b03ce7853f468002e00381aa77e8",
+    "bytes": 1403
+  },
+  {
+    "path": "knowledge/02-headless-authoring.md",
+    "sha256": "085b368df3b29411b9ed4fc6a07dc8e751bbd7b63af32f849f1e39639169dccf",
+    "bytes": 1185
+  },
+  {
+    "path": "knowledge/03-instrumentation.md",
+    "sha256": "ee92917291056ab30844da476fcb507447111af9a8d8cbc86d283415d24f4b7f",
+    "bytes": 829
+  },
+  {
+    "path": "knowledge/04-component-models.md",
+    "sha256": "f76a4599c0599a2b4c865c4204c0586297c4e71511c1839823cd2a56bd997128",
+    "bytes": 944
+  },
+  {
+    "path": "knowledge/05-definitions-and-filters.md",
+    "sha256": "f41d023973a4b723632e146727d11ae971e73565c73c19bcc869ee6c3c55f0ea",
+    "bytes": 804
+  },
+  {
+    "path": "knowledge/06-rte.md",
+    "sha256": "66ea8c4ac2a6bfc8fb26f9b919bbc5750cece3271f11ef972a37ce0d36163255",
+    "bytes": 778
+  },
+  {
+    "path": "knowledge/07-debugging.md",
+    "sha256": "e8a367c7f5368acca7e5a05e5045c2798d837b9c53acf8ce6017035138e4f194",
+    "bytes": 1008
+  },
+  {
+    "path": "knowledge/08-release-watch.md",
+    "sha256": "b57feb76df1f7aa78b5e92fcba5ab0ea1bfa55cf627630eedfedce8dc703a68a",
+    "bytes": 689
+  },
+  {
+    "path": "knowledge/extensibility/01-architecture.md",
+    "sha256": "c6391895ce82d1f46f4db94b1cc8a5b3e3c63970aef564158282d96c1de22c9c",
+    "bytes": 882
+  },
+  {
+    "path": "knowledge/extensibility/02-registration.md",
+    "sha256": "6cba4223740833d17b4034fabf0a6342eabe121d8cdbbceb4c660dadd5c43bb1",
+    "bytes": 755
+  },
+  {
+    "path": "knowledge/extensibility/03-header-menu.md",
+    "sha256": "0cd9486f5fc8464a7dc030462d3c9849de9b110ecd9d2f3258b13412b86020c6",
+    "bytes": 757
+  },
+  {
+    "path": "knowledge/extensibility/04-properties-rail.md",
+    "sha256": "ab427b4d106110f742079a648f791b9f4504fa02650cb5098c4541e73f19b3b9",
+    "bytes": 690
+  },
+  {
+    "path": "knowledge/extensibility/05-custom-data-types.md",
+    "sha256": "8247888ad931f61086b12e367c3e87b835455eb800462e97cfb67b9d5f6dc56d",
+    "bytes": 1120
+  },
+  {
+    "path": "knowledge/extensibility/06-modals.md",
+    "sha256": "c6cde752cd268ffce80fee2b43b689110c5ab43bcd0502ad72ae8bf2bf6b431b",
+    "bytes": 793
+  },
+  {
+    "path": "knowledge/extensibility/07-editor-state-actions.md",
+    "sha256": "34fd33a69a5837b85cc99384bc27f905997013f266aaf1e3b38b4e37f024fd4d",
+    "bytes": 749
+  },
+  {
+    "path": "knowledge/extensibility/08-data-and-context.md",
+    "sha256": "d4876c13b21710353e57cdf19c41837ad24e40921432f22670720fa15ad0e7da",
+    "bytes": 716
+  },
+  {
+    "path": "knowledge/extensibility/09-app-builder-runtime.md",
+    "sha256": "d31be67abf7cb4ee09f3312a8273cf68475e0856778457a7d82b54145a4d6106",
+    "bytes": 716
+  },
+  {
+    "path": "knowledge/extensibility/10-extension-manager.md",
+    "sha256": "4435caebb6a0bbc1ba790f2466ed0e985156566fbf0a4b210aa93981282e436d",
+    "bytes": 637
+  },
+  {
+    "path": "knowledge/extensibility/11-contextual-menu.md",
+    "sha256": "72026c42407bbb61d62fee3ba0009d39376491f46facb30dd2e022c88b87a01a",
+    "bytes": 730
+  },
+  {
+    "path": "knowledge/extensibility/12-advanced-use-cases.md",
+    "sha256": "9a34439cb9d4b96fed1143db56555c25b50f1ab9219491a4b4e9a95b9e4b5317",
+    "bytes": 978
+  },
+  {
+    "path": "patterns/component-model/component-definition.example.json",
+    "sha256": "005f629da118a7157b36d93b8e516dbdb15322430b5f83ade8528201ef365d63",
+    "bytes": 235
+  },
+  {
+    "path": "patterns/component-model/component-models.example.json",
+    "sha256": "49c01f16a741e22040f7e37d64a48c2dfede1821834536be03dfba74c46eec17",
+    "bytes": 617
+  },
+  {
+    "path": "patterns/editable-component/README.md",
+    "sha256": "0ee4b75e8e1b83743b33066f7c3c419d246e2d9fe1f3b37fecae3a079b75ec13",
+    "bytes": 281
+  },
+  {
+    "path": "patterns/editable-component/aueProps.ts",
+    "sha256": "83cadf6c55e71b1e7b024b5be96fd694a8f2f3cade8a5bb3908bc8cf1bd9cb62",
+    "bytes": 735
+  },
+  {
+    "path": "patterns/ui-extension/app.config.example.yaml",
+    "sha256": "16b62747901785cd1d1c330605a0d9669892f52c872cf8555fa1c9f5c2246086",
+    "bytes": 93
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/actions/example-runtime-action/index.js",
+    "sha256": "55745c7f67d9b20bcf53e762dc1d53555f06ec3f196629baf23cd604c7da9164",
+    "bytes": 1348
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/ext.config.yaml",
+    "sha256": "460c61ef02e101e789bfa5f3b75322d88960ff5d4d7989c0dd3e646ea62b2b64",
+    "bytes": 89
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/web-src/src/Constants.js",
+    "sha256": "4f1abd5cc4d559ce0a79e8542b272fe3feb8216c2acd06489670aa977f48b3fa",
+    "bytes": 71
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/web-src/src/CustomFieldRenderer.jsx",
+    "sha256": "9c29dea397a44dea463c7fd35f3ebc79886e2a227de045e5888e184bbc3594a7",
+    "bytes": 2318
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/web-src/src/DiagnosticsRail.jsx",
+    "sha256": "65c696c95fd4a1059c60b869dad49f3f083638485144123d70d7dd8b9f099ffa",
+    "bytes": 1701
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/web-src/src/ExtensionRegistration.jsx",
+    "sha256": "f7804d5302bb6fdd3b67d29492cf38ecef8fddd3e5ef45af6ce6c243666aec69",
+    "bytes": 2223
+  },
+  {
+    "path": "patterns/ui-extension/src/universal-editor-ui-1/web-src/src/WorkflowModal.jsx",
+    "sha256": "c33dda756e696127d9f16847afdb6762705de1cd59fe3f392a885666b8829617",
+    "bytes": 2070
+  },
+  {
+    "path": "prompts/build-custom-field.md",
+    "sha256": "e810ba31a94e7b2de5301c8341383902d0697654d18fa708aef7956c8291bd65",
+    "bytes": 621
+  },
+  {
+    "path": "prompts/implement-advanced-extension.md",
+    "sha256": "96a4a8ea6056bdb156406595d2225de695e219333d60d7a40b8728ba162b3f7c",
+    "bytes": 773
+  },
+  {
+    "path": "prompts/review-project.md",
+    "sha256": "d7087d574ad6cf50db283f317b9a5e9ca8b6edecc20d016fbcbf19ce05ddb809",
+    "bytes": 704
+  },
+  {
+    "path": "scripts/find-universal-editor-files.mjs",
+    "sha256": "5d6a089e8ad21080c7caf099a979406dda575f9f01dfc84192e1ab6cd1d808f7",
+    "bytes": 678
+  },
+  {
+    "path": "scripts/scan-instrumentation.mjs",
+    "sha256": "1adac85ebad2a962d836228ce05e5dcc00aec9cb5f586d6be665d099cbfd0c1a",
+    "bytes": 1409
+  },
+  {
+    "path": "scripts/validate-models.mjs",
+    "sha256": "eae949b0f8887480004e11cb47837d211f8991a808d9e9c747f204c4c00f6bfd",
+    "bytes": 2104
+  }
+]

@@ -1,0 +1,23 @@
+# Universal Editor extension review checklist
+
+- [ ] Requirement correctly classified as UI extension
+- [ ] Current extension point verified
+- [ ] Current UIX method signatures verified
+- [ ] Stable vendor-prefixed IDs used
+- [ ] `register()` lifecycle robust
+- [ ] `attach()` errors handled
+- [ ] Extension route URLs correct
+- [ ] Same-origin modal/renderer requirements respected
+- [ ] Loading state implemented
+- [ ] Empty state implemented
+- [ ] Error state implemented
+- [ ] Editor state treated as volatile
+- [ ] No token logging
+- [ ] No client-side secrets
+- [ ] Protected calls use approved backend boundary
+- [ ] Runtime Action input validated
+- [ ] External requests time out safely
+- [ ] React Spectrum used where appropriate
+- [ ] Extension Manager configuration documented
+- [ ] Preview/testing process documented
+- [ ] Rollback/disable path documented

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "product-hero",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "required": true
+      },
+      {
+        "component": "textarea",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "select",
+        "name": "theme",
+        "label": "Theme",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      }
+    ]
+  }
+]

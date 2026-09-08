@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "title": "Commerce",
+      "id": "commerce"
+    }
+  ],
+  "components": [
+    {
+      "title": "Product Hero",
+      "id": "product-hero",
+      "group": "commerce",
+      "model": "product-hero"
+    }
+  ]
+}
